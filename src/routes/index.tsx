@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { FaDownload, FaEnvelope, FaGithub, FaPhoneAlt, FaMapMarkerAlt, FaExternalLinkAlt, FaCode, FaGraduationCap, FaLanguage, FaPlus, FaBars, FaTimes } from "react-icons/fa";
+import { FaDownload, FaEnvelope, FaGithub, FaPhoneAlt, FaMapMarkerAlt, FaCode, FaGraduationCap, FaLanguage, FaPlus, FaBars, FaTimes } from "react-icons/fa";
 import { profile, about, education, skillGroups, projects, softSkills, languages, type Project } from "@/data/portfolio";
 import { TechIcon } from "@/components/portfolio/icons";
 import { Reveal, Section, Btn } from "@/components/portfolio/ui";
@@ -129,7 +129,6 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
             ))}
           </div>
           <div className="mt-auto flex flex-wrap gap-3 pt-7">
-            <Btn href={p.liveUrl} external><FaExternalLinkAlt /> Visitar proyecto</Btn>
             <Btn href={p.codeUrl} variant="ghost" external><FaGithub /> Ver código</Btn>
           </div>
         </div>
