@@ -128,9 +128,6 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
               </span>
             ))}
           </div>
-          <div className="mt-auto flex flex-wrap gap-3 pt-7">
-            <Btn href={p.codeUrl} variant="ghost" external><FaGithub /> Ver código</Btn>
-          </div>
         </div>
       </article>
     </Reveal>

@@ -47,7 +47,6 @@ export type Project = {
   features: string[];
   tech: string[];
   image: string | null;
-  codeUrl: string | null;
   placeholder?: boolean;
 };
 
@@ -66,7 +65,6 @@ export const projects: Project[] = [
     ],
     tech: ["Angular", "Node.js", "Express", "MySQL", "PWA", "IndexedDB", "JWT"],
     image: sigoaImg,
-    codeUrl: null,
   },
   {
     name: "BAD HABITS",
@@ -83,7 +81,6 @@ export const projects: Project[] = [
     ],
     tech: ["JavaScript", "HTML5", "CSS3", "SQL", "Git"],
     image: badhabitsImg,
-    codeUrl: null,
   },
   {
     name: "Próximo proyecto",
@@ -93,7 +90,6 @@ export const projects: Project[] = [
     features: [],
     tech: [],
     image: null,
-    codeUrl: null,
     placeholder: true,
   },
 ];
