@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { FaDownload, FaEnvelope, FaGithub, FaPhoneAlt, FaMapMarkerAlt, FaCode, FaGraduationCap, FaLanguage, FaPlus, FaBars, FaTimes } from "react-icons/fa";
+import { FaDownload, FaEnvelope, FaGithub, FaPhoneAlt, FaMapMarkerAlt, FaExternalLinkAlt, FaCode, FaGraduationCap, FaLanguage, FaBars, FaTimes } from "react-icons/fa";
 import { profile, about, education, skillGroups, projects, softSkills, languages, type Project } from "@/data/portfolio";
 import { TechIcon } from "@/components/portfolio/icons";
 import { Reveal, Section, Btn } from "@/components/portfolio/ui";
@@ -94,17 +94,6 @@ function Hero() {
 }
 
 function ProjectCard({ p, i }: { p: Project; i: number }) {
-  if (p.placeholder) {
-    return (
-      <Reveal>
-        <article className="flex min-h-64 flex-col items-center justify-center rounded-2xl border border-dashed border-border bg-card/30 p-10 text-center">
-          <div className="flex size-14 items-center justify-center rounded-full border border-border text-primary"><FaPlus /></div>
-          <h3 className="mt-5 text-xl font-semibold">{p.name}</h3>
-          <p className="mt-2 max-w-md text-sm text-muted-foreground">{p.description}</p>
-        </article>
-      </Reveal>
-    );
-  }
   const reverse = i % 2 === 1;
   return (
     <Reveal>
@@ -127,6 +116,10 @@ function ProjectCard({ p, i }: { p: Project; i: number }) {
                 <TechIcon name={t} className="text-primary" /> {t}
               </span>
             ))}
+          </div>
+          <div className="mt-auto flex flex-wrap gap-3 pt-7">
+            <Btn href={p.liveUrl} external><FaExternalLinkAlt /> Visitar proyecto</Btn>
+            <Btn href={p.codeUrl} variant="ghost" external><FaGithub /> Ver código</Btn>
           </div>
         </div>
       </article>

@@ -47,7 +47,8 @@ export type Project = {
   features: string[];
   tech: string[];
   image: string | null;
-  placeholder?: boolean;
+  liveUrl: string | null;
+  codeUrl: string | null;
 };
 
 export const projects: Project[] = [
@@ -65,6 +66,8 @@ export const projects: Project[] = [
     ],
     tech: ["Angular", "Node.js", "Express", "MySQL", "PWA", "IndexedDB", "JWT"],
     image: sigoaImg,
+    liveUrl: null,
+    codeUrl: "https://github.com/23302056-byte/sigoa",
   },
   {
     name: "BAD HABITS",
@@ -81,16 +84,8 @@ export const projects: Project[] = [
     ],
     tech: ["JavaScript", "HTML5", "CSS3", "SQL", "Git"],
     image: badhabitsImg,
-  },
-  {
-    name: "Próximo proyecto",
-    subtitle: "Espacio reservado",
-    date: "",
-    description: "Agrega aquí el nombre, descripción, imagen, tecnologías y enlaces de tu siguiente proyecto.",
-    features: [],
-    tech: [],
-    image: null,
-    placeholder: true,
+    liveUrl: "https://badhabits.com.mx/",
+    codeUrl: null,
   },
 ];
 
