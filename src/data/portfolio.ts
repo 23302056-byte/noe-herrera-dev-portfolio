@@ -1,7 +1,7 @@
 // Edita aquí toda la información del portafolio.
 import sigoaImg from "@/assets/sigoa.jpg";
 import badhabitsImg from "@/assets/badhabits.jpg";
-import photoImg from "@/assets/noe-herrera.jpg";
+import photoAsset from "@/assets/noe-herrera.jpg.asset.json";
 
 export const profile = {
   name: "Noe Herrera",
@@ -9,7 +9,7 @@ export const profile = {
   intro:
     "Soy estudiante de Ingeniería en Desarrollo y Gestión de Software, con experiencia práctica en desarrollo de aplicaciones web, implementación de APIs REST y gestión de bases de datos. Me interesa participar en proyectos reales, desarrollar soluciones tecnológicas y continuar fortaleciendo mis habilidades profesionales.",
   // Ruta de la foto (ej. importada desde src/assets). null = espacio reservado.
-  photo: photoImg as string | null,
+  photo: photoAsset.url as string | null,
   // Ruta del CV en /public (ej. "/cv-noe-herrera.pdf"). null = botón deshabilitado.
   cvUrl: null as string | null,
   phone: "220 155 7763",
